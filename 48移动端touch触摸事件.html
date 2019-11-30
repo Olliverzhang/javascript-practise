@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        div{
+            position:absolute;
+            width:100px;
+            height:100px;
+            background-color: pink;
+        }
+    </style>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div></div>
+        <script>
+            var div = document.querySelector("div");
+            //div.addEventListener("touchstart", function(e){
+            //    console.log("触摸");
+            //})
+            //div.addEventListener("touchmove", function () {
+            //    console.log("我移动了");
+            //})
+            //div.addEventListener("touchend", function () {
+            //        console.log("走了");
+            //})
+            //手指的初始坐标
+            var startX = 0;
+            var starty = 0;
+            //盒子的初始坐标
+            var X = 0;
+            var Y = 0;
+            div.addEventListener("touchstart", function(e){
+                startX = e.targetTouches[0].pageX;
+                startY = e.targetTouches[0].pageY;
+                X = div.offsetLeft;
+                Y = div.offsetTop;
+            });
+            div.addEventListener("touchmove", function (e) {
+                var moveX = e.targetTouches[0].pageX - startX;
+                var moveY = e.targetTouches[0].pageY - startY;
+                div.style.left = X + moveX + 'px';
+                div.style.top = Y + moveY + 'px';
+                e.preventDefault();
+            });
+
+        </script>
+    </body>
+</html>

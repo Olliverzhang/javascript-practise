@@ -1,0 +1,126 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-28 19:46:17
+ * @LastEditTime: 2019-08-19 20:43:41
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .tab{
+                width:700px;
+                height:700px;
+                margin:100px auto;
+            }
+            .tab_list{
+                width:700px;
+                height:41px;
+                border-bottom: solid #6f3589;
+                
+            } 
+            .tab_con{
+                width:700px;
+                height:250px;
+                margin-top:10px;
+                
+            }
+            ul{
+                height:40px;
+                padding-left:0px;
+                margin:0px;
+                
+                
+            }
+            ul li{
+                list-style: none;
+                float:left;
+                padding:10px;            
+            }
+            .item{
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="tab">
+            <div class="tab_list">
+                <ul>
+                    <li class="current">商品介绍</li>
+                    <li>规格与包装</li>
+                    <li>售后保障</li>
+                    <li>商品评价</li>
+                    <li>商品社区</li>
+                </ul>
+            </div>
+            <div class="tab_con">
+                <div class="item">
+                    商品介绍模块内容
+                </div>
+                <div class="item">
+                    商品的规格介绍与包装
+                </div>
+                <div class="item">
+                    售后保障与服务
+                </div>
+                <div class="item">
+                    人们对于该商品的评价
+                </div>
+                <div class="item">
+                    商品社区的交流与讨论
+                </div>
+            </div>
+        </div>
+        <script>
+            // var lis = document.querySelectorAll("li");
+            // var cons = document.getElementsByClassName("item");
+            // for(var i=0; i<lis.length; i++){
+            //     //给5个小li设置索引号
+            //     lis[i].setAttribute("index",i);
+            //     lis[i].onclick = function(){
+            //         //事件一
+            //         for(var i=0; i<lis.length; i++){
+            //             lis[i].style.backgroundColor="";
+            //         }
+            //          this.style.backgroundColor = "#f82576";
+            //         //事件二
+            //         var n = this.getAttribute("index");
+            //         for(var i=0; i<lis.length; i++){
+            //             cons[i].style.display = "none";
+            //         }
+            //         cons[n].style.display="block";
+
+            //     }
+            // }
+                var tabs = document.querySelector("ul").querySelectorAll("li");
+                var cons = document.querySelectorAll(".item");
+                for(var i=0; i<tabs.length; i++){
+                    tabs[i].setAttribute("index",i);
+                    tabs[i].onclick = function(){
+                        for(var i=0; i<tabs.length; i++){
+                            tabs[i].style.backgroundColor = "";
+                        }
+                        this.style.backgroundColor = "pink";
+                        var n = this.getAttribute("index");
+                        for(var i=0; i<cons.length; i++){
+                            cons[i].style.display = "none";
+                        }
+                        cons[n].style.display = "block";
+                    }
+                }
+        </script>
+    </body>
+</html>

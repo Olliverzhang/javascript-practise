@@ -1,0 +1,135 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-28 14:54:10
+ * @LastEditTime: 2019-08-19 20:06:28
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table{
+                margin:200px auto;
+                width:500px;
+            }
+            thead{
+                background-color: #078;
+            }
+            td{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div>
+            <table class="wrap">
+                <thead>
+                    <tr>
+                        <th>
+                            <input type="checkbox" id="j_cbAll"/>
+                        </th>
+                        <th>商品</th>
+                        <th>价钱</th>
+                    </tr>
+                </thead>
+                <tbody id="j_tb">
+                    <tr>
+                        <td>
+                            <input type="checkbox"/>
+                        </td>
+                        <td>iphone8</td>
+                        <td>8000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox"/>
+                        </td>
+                        <td>iphone9</td>
+                        <td>10000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox"/>
+                        </td>
+                        <td>huawei</td>
+                        <td>12000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox"/>
+                        </td>
+                        <td>opppo</td>
+                        <td>3000</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+        <script>
+            // var j_cbAll = document.getElementById("j_cbAll");
+            // var j_tbs = document.querySelector("tbody").getElementsByTagName("input");
+            // j_cbAll.onclick = function(){
+            //     for(var i=0;i<j_tbs.length;i++){
+            //         //j_tbs[i].checked = this.checked;
+            //         j_tbs[i].checked = j_cbAll.checked;
+            //     }
+            // }
+            // for(var i=0; i<j_tbs.length; i++){
+            //     j_tbs[i].onclick = function(){
+            //         var flag=true;
+            //         for(var i=0; i<j_tbs.length; i++){
+            //             if(!j_tbs[i].checked){
+            //                 flag = false;
+            //                 break;
+            //             }
+            //         }
+            //         j_cbAll.checked=flag;
+            //     }
+            // }
+            var checkbox = document.getElementById("j_cbAll");
+            var boxs = document.querySelector("tbody").getElementsByTagName("input");
+            checkbox.onclick = function(){
+                if(this.checked === true){
+                    for(var i=0; i< boxs.length; i++){
+                        boxs[i].checked = this.checked;
+                    }
+                }
+                else if(this.checked === false){
+                    for (var i = 0; i < boxs.length; i++) {
+                        boxs[i].checked = false;
+                    }
+                }
+            }
+            
+            for(var i=0; i<boxs.length; i++){
+                
+                boxs[i].onclick = function(){
+                    var flag = true;
+                    for(var i=0; i<boxs.length; i++){
+                       if(!boxs[i].checked) {
+                           flag = false;
+                           break;
+                       }
+                    }    
+                    checkbox.checked = flag;
+                    console.log(checkbox.checked);
+                    
+                }
+            }
+            
+        </script>
+    </body>
+</html>

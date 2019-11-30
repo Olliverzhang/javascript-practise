@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            .box{
+                position:relative;
+                width:220px;
+                height:250px;
+                margin:200px auto;
+                padding:0;
+                text-align:center;
+                font-size:20px;
+            }
+            button{
+                position:absolute;
+                top:0px;
+                right:0px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            淘宝二维码
+            <img src="images/ewm.jpg">
+            <button type="button" class="close">&times;</button>
+        </div>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            var box = document.querySelector(".box");
+            var btn = document.querySelector("button");
+            btn.onclick = function(){
+                box.style.display="none";
+            }
+        </script>
+    </body>
+</html>

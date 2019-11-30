@@ -1,0 +1,60 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-29 17:08:02
+ * @LastEditTime: 2019-08-21 21:05:19
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            img{
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <img src="images/angle.jpg" alt="">
+        <script>
+            var img = document.querySelector("img");
+            document.addEventListener("mousemove", function(e){
+                img.style.top = e.pageY + 'px';
+                img.style.left = e.pageX  + 'px';
+            })
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            // var img = document.querySelector("img");
+            // document.addEventListener("mousemove", function(e){
+            //     var x = e.pageX;
+            //     var y = e.pageY;
+            //     img.style.top = y - 20 + "px";
+            //     img.style.left = x - 20 + "px";
+            // })
+        </script>
+    </body>
+</html>

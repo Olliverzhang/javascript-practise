@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            
+            thead{
+                background-color:#1ff;
+            }
+            .bg{
+                color:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <table>
+            <thead>
+                <tr>
+                    <th>代码</th>
+                    <th>名称</th>
+                    <th>最新公布净值</th>
+                    <th>累计净值</th>
+                    <th>前单位净值</th>
+                    <th>净值增长率</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>212234</td>
+                    <td>aaa</td>
+                    <td>sss</td>
+                    <td>bbb</td>
+                    <td>ddd</td>
+                    <td>vvv</td>
+                </tr>
+                <tr>
+                    <td>212234</td>
+                    <td>ccc</td>
+                    <td>sss</td>
+                    <td>nnn</td>
+                    <td>erf</td>
+                    <td>ddd</td>
+                </tr>
+                <tr>
+                    <td>212234</td>
+                    <td>hhj</td>
+                    <td>546463</td>
+                    <td>bbn</td>
+                    <td>ffh</td>
+                    <td>rhy</td>
+                </tr>
+                <tr>
+                    <td>212234</td>
+                    <td>ryre</td>
+                    <td>rre</td>
+                    <td>hee</td>
+                    <td>rhh</td>
+                    <td>rrh</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+            var trs = document.querySelector("tbody").querySelectorAll("tr");
+            for(var i=0; i<trs.length; i++){
+                trs[i].onmouseover = function(){
+                    //this.style.color="pink";//这里如果将this改为trs[i]则会报错
+                    this.className = "bg";
+                }
+                trs[i].onmouseout = function () {
+                    //this.style.color = "black";//这里如果将this改为trs[i]则会报错
+                    this.className ="";
+                  // trs[i].className="";报错
+                }
+            }
+        </script>
+    </body>
+</html>

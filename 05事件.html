@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <button>唐伯虎</button>
+        <div>123</div>
+        <p>我是文字<span>2333</span> </p>
+        <script>
+            var btn = document.getElementsByTagName("button");
+            //btn[0].onclick = function(){
+            //    alert("点秋香");
+            //}
+            var sel = document.querySelector("div");
+            //sel.onclick = function(){
+            //    console.log("我被选中了");
+            //}
+            btn[0].onclick = function(){
+                //sel.innerText="2019-3-8";
+                sel.innerText = getDate();
+            }
+            function getDate(){
+                var date = new Date();
+                var year = date.getFullYear();
+                var month = date.getMonth() + 1;
+                var dates = date.getDate();
+                var arr = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+                var day = date.getDay();
+                return "今天是" + year + "年" + month + "月" + dates + "日" + arr[day];
+            }
+            var p =document.querySelector("p");
+            console.log(p.innerText);
+            console.log(p.innerHTML);
+        </script>
+    </body>
+</html>

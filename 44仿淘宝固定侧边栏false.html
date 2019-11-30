@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .header,
+            .banner,
+            .main{
+                width: 90%;
+                margin-bottom:5px;
+            }
+            .slider-bar{
+                width: 10%;
+                height:50px;
+                left:90%;
+                top:300px;
+                background-color: pink;
+                line-height:50px;
+            }
+            .header{
+                height:300px;
+                background-color: pink;
+            }
+            .banner{
+                height:500px;
+                background-color: green;
+            }
+            .main{
+                height: 1000px;
+                background-color: yellowgreen;
+            }
+            span{
+                position: absolute;
+                bottom:0;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!-- <div class=“login-header><a id="link" href="javascript:;">点击，弹出登录框</a></div>
+        <div id="login" class="login">
+            <div id="title" class="login-title">登录会员
+                <span><a id="closeBtn" href="javascript:void(0);" class="close-login">关闭</a></span>
+            </div>
+            <div class="login-input-content">
+                <div class="login-input">
+                    <label>用户名：</label>
+                    <input type="text" placeholder="请输入用户名" name="info[username]" id="username" class="">
+                </div>
+                <div class="login-input">
+                    <label>登录密码</label>
+                    <input type="password" placeholder="请输入登录密码" name="info[password]" id="password" class="">
+                </div>
+            </div>
+            <div id="loginBtn" class="login-button"><a href="javascript:void(0);" id="login-button-submit"></a></div>
+        </div> -->
+        <!-- 遮盖层 -->
+
+        <div class="slider-bar">
+            <span class="goBack">返回顶部</span>
+        </div>
+        <div class="header w">头部区域</div>
+        <div class="banner w">banner区域</div>
+        <div class="main w">主体部分</div>
+        <script>
+            var sliderbar = document.querySelector(".slider-bar");
+            var banner = document.querySelector(".banner");
+            var bannerTop = banner.offsetTop;
+            var sliderbarTop = sliderbar.offsetTop - bannerTop;
+            document.addEventListener("scroll", function(){
+                //console.log(window.pageYOffset);
+                if(window.pageYOffset >= bannerTop){
+                    sliderbar.style.position = "fixed";
+                    sliderbar.style.top = sliderbarTop + 'px';
+                }
+                else{
+                    sliderbar.style.position = "absolute";
+                    //sliderbar.style.top = '500px';
+                }
+            })
+        </script>
+    </body>
+</html>

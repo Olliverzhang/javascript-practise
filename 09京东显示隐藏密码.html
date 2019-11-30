@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .box{
+                position:relative;
+                width: 400px;
+                border:1px solid red;
+                margin:100px auto;
+            }
+            .box input{
+                width:370px;
+                height: 30px;
+                border:0;
+                outline:none;
+            }
+            .box img{
+                position:absolute;
+                top:2px;
+                right: 20px;
+                width:24px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="box">
+            <label>
+                <img src="images/closed.jpg" id="eye">
+            </label>
+            <input type="password" name="" id="pwd">
+        </div>
+
+        <script>
+            var eye = document.getElementById("eye");
+            var pwd = document.getElementById("pwd");
+            var flag= 0;
+            eye.onclick = function(){
+                if (flag == 0){
+                    pwd.type="text";
+                    eye.src = "images/open.jpg";
+                    flag = 1;
+                }
+                else{
+                    pwd.type ="password";
+                    eye.src = "images/closed.jpg";
+                    flag = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

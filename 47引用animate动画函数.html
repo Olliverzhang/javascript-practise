@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .sliderbar{
+                position: absolute;
+                left:500px;
+                top:100px;
+                width:60px;
+                height:40px;
+                background-color: pink;
+            }
+            .con{
+                position: absolute;
+                left:0;
+                top:0;
+                width:200px;
+                height:40px;
+                background-color: purple;
+                z-index: -1;
+            }
+        </style>
+        <script src="46animate.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="sliderbar">
+            <span><-</span>
+            <div class="con">问题反馈</div>
+        </div>
+        <script>
+            var sliderbar = document.querySelector(".sliderbar");
+            var con = document.querySelector(".con");
+            var span = document.querySelector("span");
+            //当我们鼠标经过sliderbar就会让con这个盒子滑动到左侧
+            sliderbar.addEventListener("mouseenter",function(){
+                animate(con, -800, function(){
+                    span.innerHTML="->"
+                });
+            })
+            sliderbar.addEventListener("mouseleave", function () {
+                animate(con, 0, function () {
+                    span.innerHTML = "<-"
+                });
+            })
+            //当我们鼠标离开sliderbar就会让con这个盒子滑动到右侧
+        </script>
+    </body>
+</html>

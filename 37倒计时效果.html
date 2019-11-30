@@ -1,0 +1,106 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-30 14:55:09
+ * @LastEditTime: 2019-08-23 10:03:31
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            div{
+                width:250px;
+                height: 250px;
+                margin:100px auto;
+
+            }
+            span{
+                display:block;
+                float: left;
+                width:60px;
+                height: 60px;
+                background-color: #000;
+                color:#fff;
+                font-size: 20px;
+                line-height:60px;
+                margin:5px;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div>
+            <span class="hour">1</span>
+            <span class="minute">2</span>
+            <span class="second">3</span>
+        </div>
+        <script>
+            var hour = document.querySelector(".hour");
+            var minute = document.querySelector(".minute");
+            var second = document.querySelector(".second");
+            var targetTime = new Date("2019-9-11 18:00:00");
+            dropdown();
+            var timer = setInterval(dropdown,1000);
+
+            function dropdown(){
+                var t = new Date();
+                var minus = (targetTime - t) / 1000;
+                var h = parseInt(minus / 60 / 60 % 24);
+                var h = h > 9 ? h : '0' + h;
+                var m = parseInt(minus / 60 % 60);
+                var m = m > 9 ? m : '0' + m;
+                var s = parseInt(minus % 60);
+                var s = s > 9 ? s : '0' + s;
+                hour.innerText = h;
+                minute.innerText = m;
+                second.innerText = s;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // var hour = document.querySelector(".hour");
+            // var minute = document.querySelector(".minute");
+            // var second = document.querySelector(".second");
+            // var inputTime = +new Date("2019-9-11 18:00:00");
+            // countDown();//先调用一次这个函数，防止第一次刷新页面有空白
+            // //开启定时器
+            // setInterval(countDown,1000);
+            // function countDown(){
+            //     var nowTime = +new Date();//返回当前时间总的毫秒数
+            //     var times = (inputTime - nowTime)/1000;
+            //     var h = parseInt(times / 60 / 60 % 24);
+            //     h = h < 10 ? h="0"+h:h;
+            //     hour.innerHTML = h;
+            //     var m = parseInt(times / 60 % 60);
+            //     minute.innerHTML = m;
+            //     var s = parseInt(times % 60);
+            //     second.innerHTML = s;
+            // }
+
+        </script>
+    </body>
+</html>

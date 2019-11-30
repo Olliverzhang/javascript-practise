@@ -1,0 +1,97 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-29 08:36:48
+ * @LastEditTime: 2019-08-20 15:03:41
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .nav{
+                list-style:none;
+                
+                
+            }
+            .nav>li{
+                float:left;
+                margin-right: 5px;
+            }
+            .nav ul{
+                list-style:none;
+                padding-left:0px;
+                display:none;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <ul class="nav">
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>aa</li>
+                    <li>bb</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>aa</li>
+                    <li>bb</li>
+                    <li>cc</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>aa</li>
+                    <li>bb</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li>aa</li>
+                    <li>bb</li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            // var nav = document.querySelector(".nav");
+            // var lis = nav.children;
+            // for(var i=0; i<lis.length; i++){
+            //     lis[i].onmouseover = function(){
+            //         this.children[1].style.display="block";
+            //     }
+            //     lis[i].onmouseout = function () {
+            //         this.children[1].style.display = "none";//此处必须用this否则报错
+            //     }
+            // }
+
+            var nav = document.querySelector("ul").children;
+            for(var i=0; i<nav.length; i++){
+                nav[i].onmouseover = function(){
+                    this.children[1].style.display = "block";
+                }
+                nav[i].onmouseout = function () {
+                    this.children[1].style.display = "none";
+                }
+            }
+            
+        </script>
+    </body>
+</html>

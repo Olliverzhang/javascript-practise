@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            div{
+                width:100px;
+                height:100px;
+                background-color: pink;
+                margin:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+
+        <script>
+            var btn = document.querySelectorAll("div");
+            //传统方式
+            btn[0].onclick = function(){
+                alert("11");
+                btn[0].onclick = null;
+                //this.btn[0].onclick = null;//此处不能用this替换btn[0]，否则报错！！！！
+            }
+            //addEventListener
+            btn[1].addEventListener("click",fn);
+            function fn(){
+                alert("22");
+                btn[1].removeEventListener("click",fn);
+            }
+            
+        </script>
+    </body>
+</html>

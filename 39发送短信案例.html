@@ -1,0 +1,101 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-30 15:46:26
+ * @LastEditTime: 2019-08-23 10:57:41
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        手机号码：<input type="number">
+        <button>发送</button>
+        <div></div>
+        <script>
+            var btn = document.querySelector("button");
+            var t = 5;
+            btn.addEventListener("click", function () {
+                btn.disabled = true;
+                var timer = setInterval(function () {
+                    if (t == 0) {
+                        clearInterval(timer);
+                        btn.innerHTML = '发送';
+                        btn.disabled = false;
+                    }else{
+                        btn.innerHTML = "还剩"+t+'s';
+                        t--;
+                    }
+                },1000)
+                
+            })
+            var div = document.querySelector('div');
+            var t = new Date();
+            div.innerHTML = t;
+    // console.log(1);
+
+    // setTimeout(function () {
+
+    //     console.log(3);
+
+    // }, 0);
+
+    // console.log(2);
+    console.log(1);
+    document.onclick = function () {
+        console.log('click');
+    }
+    console.log(2);
+    setTimeout(function () {
+        console.log(3)
+    }, 3000)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            // var btn = document.querySelector("button");
+            // var timer = 3;
+            // btn.addEventListener("click",function(){
+            //     var timer1 = setInterval(function(){
+            //         if(timer == 0){
+            //             clearInterval(timer1);
+            //             btn.innerHTML = "发送";//button通过innerHtml修改中间的文字内容！！！！！！
+            //             timer = 3;
+            //         }
+            //         else{
+            //             btn.innerHTML = "还剩"+ timer +"秒";
+            //             timer--;
+            //         }
+            //     },1000)
+            // })
+        </script>
+    </body>
+</html>

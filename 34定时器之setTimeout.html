@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            //window.setTimeout(调用函数,延时时间);
+            //window在调用的时候可以省略
+            //延时的单位是毫秒，可以省略此时不延时
+            //这个调用函数可以直接写函数 还可以写函数名
+            //页面中可能会有很多定时器，因此常常给定时器加标识符
+            var timer1 = setTimeout(function(){
+                console.log("爆炸了")
+            }, 3000)
+            function callback(){
+                console.log("又炸了");
+            }
+            var timer2 = setTimeout(callback,2000);
+            var timer3 = setInterval(callback,1000)
+        </script>
+    </body>
+</html>

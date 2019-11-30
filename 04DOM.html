@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Document</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id="time">2019-9-9</div>
+        <ul>
+            <li>知否知否，应是绿肥红瘦1</li>
+            <li>知否知否，应是绿肥红瘦2</li>
+            <li>知否知否，应是绿肥红瘦3</li>
+            <li>知否知否，应是绿肥红瘦4</li>
+            <li>知否知否，应是绿肥红瘦5</li>
+            <li>知否知否，应是绿肥红瘦6</li>
+        </ul>
+        <ol id="word">
+            <li>生僻字</li>
+            <li>生僻字</li>
+            <li>生僻字</li>
+            <li>生僻字</li>
+        </ol>
+        <div class="box">盒子</div>
+        <div class="box">盒子</div>
+        <div id="nav">
+            <ul>
+                <li>首页</li>
+                <li>产品</li>
+            </ul>
+        </div>
+        <script>
+            var timer = document.getElementById("time");
+            console.log(timer);
+            console.log(typeof(timer));
+            console.dir(timer);//打印返回的元素对象，更好的查看里面的属性和方法
+            var lister = document.getElementsByTagName("li");
+            console.log(lister[0]);
+            for(var i=0;i<lister.length;i++){
+                console.log(lister[i]);
+            }
+            var ol = document.getElementById("word");
+            console.log(ol.getElementsByTagName("li"));
+            var boxs = document.getElementsByClassName("box");
+            console.log(boxs);
+            var firstBox = document.querySelector(".box");
+            console.log(firstBox);
+            var naver = document.querySelector("#nav");
+            console.log(naver);
+            var lis = document.querySelectorAll("li");
+            console.log(lis);
+        </script>
+    </body>
+</html>

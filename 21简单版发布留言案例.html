@@ -1,0 +1,74 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-29 09:27:27
+ * @LastEditTime: 2019-08-21 14:38:14
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        textarea{
+            width:200px;
+            height: 300px;
+        }
+    </style>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <textarea>123</textarea>
+        <button>发布</button>
+        <ul>
+
+        </ul>
+        <script>
+            // var btn = document.querySelector("button");
+            // var text = document.querySelector("textarea");
+            // var ul = document.querySelector("ul");
+            // btn.onclick = function(){
+            //     if(!text.value){
+            //         alert("您没有输入任何内容！");
+            //         return false;
+            //     }
+            //     else{
+            //         var li = document.createElement("li");
+            //         li.innerHTML = text.value;
+            //         //ul.appendChild(li);
+            //         ul.insertBefore(li,ul.children[0]);
+            //     }
+            // }
+                var text = document.querySelector("textarea");
+                var ul = document.querySelector("ul");
+                var btn = document.querySelector("button");
+                btn.onclick = function(){
+                    if(text.value){
+                        var li = document.createElement("li");
+                        li.innerHTML = text.value + '<a href="#">删除</a>';
+                        ul.insertBefore(li,ul.children[0]);
+                        var a = document.querySelectorAll("a");
+                        for(var i=0; i<a.length; i++){
+                            a[i].onclick = function(){
+                                ul.removeChild(this.parentNode);
+                            }
+                        }               
+                    }
+                    else{
+                        alert("您没有输入内容");
+                        return false;
+                    } 
+                }  
+        </script>
+    </body>
+</html>

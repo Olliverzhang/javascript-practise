@@ -1,0 +1,55 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-31 10:12:17
+ * @LastEditTime: 2019-08-23 16:12:56
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            div{
+                width:300px;
+                height: 300px;
+                background-color: pink;
+                margin-left:300px;
+                margin-top: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div></div>
+        <script>
+            var div = document.querySelector('div');
+            div.addEventListener("mousemove", function (e) {
+                var x = e.pageX - div.offsetLeft;
+                // console.log(x);
+                var y = e.pageY - div.offsetTop;
+                console.log(x +','+y);
+                
+            })
+
+
+            
+            // var div = document.querySelector("div");
+            // div.addEventListener("mousemove", function(e){
+            //     var x = e.pageX - div.offsetLeft;
+            //     var y = e.pageY - div.offsetTop;
+            //     div.innerHTML = "x坐标为" + x + "y坐标为" + y;
+            // })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-29 10:41:23
+ * @LastEditTime: 2019-08-21 15:35:12
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            table{
+                border-collapse: collapse;
+                width:300px;
+                margin:200px auto;
+                text-align:center;
+            }
+            td,
+            th{
+                border:1px solid #333;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>科目</th>
+                    <th>成绩</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <script>
+            //首先准备好数据，用数组生成
+            var dates=[{
+                name:"魏璎珞",
+                subject:"javascript",
+                score:100
+            },{
+                name:"弘历",
+                subject:"javascript",
+                score:90
+            },{
+                name: "傅恒",
+                subject: "javascript",
+                score: 99
+            },{
+                name: "明玉",
+                subject: "javascript",
+                score: 88
+            }]
+            var tbody = document.querySelector("tbody");
+            for(var i=0; i<dates.length; i++){
+                var tr = document.createElement("tr");
+                tbody.appendChild(tr);
+                for(var k in dates[i]){
+                    var td = document.createElement("td");
+                    td.innerText = dates[i][k];
+                    tr.appendChild(td);
+                }
+                var td = document.createElement("td");
+                td.innerHTML = '<a href=\"javascript:;\">删除</a>';
+                tr.appendChild(td);
+            }
+            var a = document.querySelectorAll("a");
+            for(var i=0; i<a.length; i++){
+                // console.log(tr);
+                a[i].onclick = function () { 
+                    var tr = this.parentNode.parentNode;
+                    tbody.removeChild(tr);
+                }
+            }
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            // //往tbody中创建行，有几个人就创建几个行
+            // var tbody = document.querySelector("tbody");
+            // for(var i=0; i<dates.length; i++){//外面的for循环管理行
+            //     var tr = document.createElement("tr");
+            //     tbody.appendChild(tr);
+            //     //行里面创建单元格td单元格的数量取决于每个对象里面的属性个数 for循环遍历对象dates[i]
+            //     for(var k in dates[i]){
+            //         //创建单元格
+            //         var td = document.createElement("td");
+            //         //console.log(dates[i][k]);
+            //         //把对象里面的属性值给td
+            //         td.innerHTML = dates[i][k];
+            //         tr.appendChild(td);                    
+            //     }
+            //     //创建有删除连个字的单元格
+            //     var td = document.createElement("td");
+            //     td.innerHTML = "<a href='javascript:;'>删除</a>";
+            //     tr.appendChild(td);
+            // }
+            // var a = document.querySelectorAll("a");            
+            // for(var i=0; i<a.length; i++){
+                
+            //     //console.log(del);
+            //     a[i].onclick = function(){
+            //         var del = this.parentNode.parentNode;//这句话必须要在onclick事件里面而且必须要用this否则报错！！！
+            //         tbody.removeChild(del);
+                    
+            //     }
+            // }
+            
+        </script>
+    </body>
+</html>

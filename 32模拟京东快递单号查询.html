@@ -1,0 +1,86 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-07-30 10:34:50
+ * @LastEditTime: 2019-08-21 21:24:52
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            .search{
+                position:relative;
+                width:178px;
+                margin:100px;
+            }
+            .con{
+                display: none;
+                position:absolute;
+                top:-40px;
+                width:171px;
+                border:1px solid rgba(0, 0, 0, 0,2);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0,2);
+                padding:5px 0;
+                font-size: 18px;
+                line-height: 20px;
+                color: #333;
+            }
+            .con::before{
+                content:'';
+                width:0;
+                height:0;
+                position:absolute;
+                top:28px;
+                left:18px;
+                border:8px solid #000;
+                border-style:solid dashed dashed;
+                border-color:#fff transparent transparent;
+            }
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="search">
+            <div class="con">123</div>
+            <input type="text" placeholder="请输入您的快递单号" class="jd">
+        </div>
+        <script>
+            // var con = document.querySelector(".con");
+            // var text = document.querySelector(".jd");
+            // text.addEventListener("keyup", function(){
+            //     //keydown首先触发按下按钮，第一次按下的时候文本框没有内容因此会出现显示滞后的情况
+            //     if(text.value == ""){
+            //         con.style.display =="none";
+            //     }
+            //     else{
+            //         con.style.display = "block";
+            //         con.innerHTML = this.value;
+            //     }
+            // })
+            // //当失去焦点就隐藏con盒子
+            // text.addEventListener("blur",function(){
+            //     con.style.display = "none";
+            // })
+            // text.addEventListener("focus", function () {
+            //     if(text.value !== ""){
+            //         con.style.display = "block";
+            //     }
+            //     else{
+            //         con.style.display = "none";
+            //     }
+            // })
+        </script>
+    </body>
+</html>
